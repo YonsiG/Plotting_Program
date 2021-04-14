@@ -60,6 +60,12 @@ void plots()
     h1->Draw("TEXT0 E0");
    else
     h1->Draw("E0");
+
+   TLegend *legend = new TLegend(0.82,0.80,0.93,0.92); //the coordination of the legend frame;
+   legend->AddEntry(h1,legend1,"lpfe");
+   legend->SetTextFont(70);
+   legend->SetTextSize(0.04);
+   legend->Draw("same");
   }
 
   if(Compare){
